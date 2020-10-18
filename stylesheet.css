@@ -1,0 +1,198 @@
+body {
+    background-color: #eee;
+    text-align: center;
+    background-image: url(img/h.jpg);
+}
+.logo{
+    position: relative;
+  left: 50px;
+  width: 200px;
+  height: 80px;
+  
+}
+button {
+    background-color: rgba(0,0,0,0);
+    outline: none;
+}
+.btn1{
+    border-radius: 8px;
+    padding: 10px 15px;
+    background-color: blue;
+    font-size: 15px;
+}
+.btn1:hover{
+    background-color:lightblue;
+}
+.btn2{
+    border-radius: 8px;
+    padding: 10px 24px;
+    background-color: green;
+    font-size: 12px;
+}
+.btn2:hover{
+    background-color: yellowgreen;
+}
+ .btnob{
+    border-radius: 8px;
+    padding: 10px 15px;
+    background-color:lightskyblue;
+    font-size: 12px;
+ }
+ .btnun{
+    border-radius: 8px;
+    padding: 10px 15px;
+    background-color: limegreen;
+    font-size: 12px;
+ }
+ .btncancel{
+    border-radius: 8px;
+    padding: 10px 24px;
+    background-color: red;
+    font-size: 15px;
+ }
+h2 {
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 5px 14px;
+    border: 2px solid #201f1d;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,.4);
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+input:focus {
+    border: 2px solid rgba(0,0,0,.4);
+    background-color: rgb(60,60,60);
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    color: #000;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+}
+
+form p {
+    margin-bottom: 5px;
+}
+
+form p:nth-child(1){
+    margin-top: 0;
+}
+
+.panel {
+    margin-top: 20px;
+    float: none;
+}
+
+@media (min-width: 768px) {
+    .panel {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .panel {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 70%;
+    height: 600px;
+    overflow-y : scroll;
+    background-color: white;
+    position: relative;
+  }
+  
+
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    border-radius: 8px;
+    padding: 10px 24px;
+    background-color: red;
+    font-size: 12px;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+
+  .column {
+  float: left;
+}
+
+.left {
+  width: 70%;
+}
+
+.right {
+  width: 30%;
+  height: 70%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+
+   /*jssor slider loading skin double-tail-spin css*/
+   .jssorl-004-double-tail-spin img {
+    animation-name: jssorl-004-double-tail-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-004-double-tail-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*jssor slider bullet skin 031 css*/
+.jssorb031 {position:absolute;}
+.jssorb031 .i {position:absolute;cursor:pointer;}
+.jssorb031 .i .b {fill:#000;fill-opacity:0.6;stroke:#fff;stroke-width:1600;stroke-miterlimit:10;stroke-opacity:0.8;}
+.jssorb031 .i:hover .b {fill:#fff;fill-opacity:1;stroke:#000;stroke-opacity:1;}
+.jssorb031 .iav .b {fill:#fff;stroke:#000;stroke-width:1600;fill-opacity:.6;}
+.jssorb031 .i.idn {opacity:.3;}
+
+/*jssor slider arrow skin 051 css*/
+.jssora051 {display:block;position:absolute;cursor:pointer;}
+.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+.jssora051:hover {opacity:.8;}
+.jssora051.jssora051dn {opacity:.5;}
+.jssora051.jssora051ds {opacity:.3;pointer-events:none;}

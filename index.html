@@ -1,0 +1,249 @@
+<html>
+<head>
+	<title>BMI Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<div class="logo"> <img src="img/bmi.jpg"; alt="BMI lOGO" width="130PX" height="130PX"> </div> <div><p><i style="font-size: 40px; color: lightseagreen;">Welcome to accurate BMI checker </i> </p></div>
+		</nav>
+	<script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    
+    <link href="//fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic2200italic,800,800italic,900,900italic&subset=latin-ext,cyrillic-ext,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic2200italic&subset=latin-ext,greek-ext,cyrillic-ext,greek,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript">
+
+  window.onload = function() {
+
+    document.getElementById("asd").style.display = "none";
+	document.getElementById("asd1").style.display = "none";
+	document.getElementById("btnob").style.display = "none";
+	document.getElementById("btnun").style.display = "none";
+	document.getElementById("btnobus").style.display = "none";
+	document.getElementById("btnunin").style.display = "none";
+  };
+
+  function asd(a) {
+  
+    if (a == 1) {
+	  document.getElementById("asd").style.display = "block";
+	  document.getElementById("asd1").style.display = "none";
+    } else {
+      document.getElementById("asd").style.display = "none";
+    }
+      
+  }
+  function asd1(a) {
+  
+  if (a == 1) {
+	document.getElementById("asd1").style.display = "block";
+	document.getElementById("asd").style.display = "none";
+  } else {
+	document.getElementById("asd1").style.display = "none";
+  }
+	
+}
+</script>
+
+    <div class="container " >
+		<div class="row">
+			<div class="column left">
+    	<div class="panel">
+			<h2 class="text-center" style="background-color: aliceblue;">Choose your calculator</h2>
+			<button type="button" onclick="asd(1)" class="btn1" id="insert" value="Add new Product">interational metric</button>
+<button type="button" onclick="asd1(1)" id="update" class="btn2" value="Update Product">U.S metric</button>
+			
+    			
+    			<form >
+					<div id="asd">
+						<p id="introText" class="text-center">Enter your weight and height below to check your BMI results</p>
+    			
+    				<div id="weightInput">
+    					<p>Put your weight in here (kg)</p>
+    		     		<input id="weight" type="number" pattern="[0-9]*" name="a" />
+    				</div>
+    				<div id="heightInput">
+    					<p>And your height in here (M)</p>
+	    				 <input id="height" type="number" pattern="[0-9]*" name="b"/> 
+					</div>
+					<div id="results" class="text-center">Your BMI: </div>
+					<button type="button" class="btn1" id="btnin" onclick="calculate()">Calculate</button>
+					<button type="button" class="btnob" id="btnob" onclick="obeseForm()">Obese Effects</button>
+    		<button type="button" class="btnun" id="btnun" onclick="underForm()" >Underweight Effects</button>
+				</div>
+				<div id="asd1">
+					<p id="introText" class="text-center">Enter your weight and height below to check your BMI results</p>
+    			
+    				<div id="weightInput">
+    					<p>Put your weight in here (pounds)</p>
+    		     		<input id="weightus" type="number" pattern="[0-9]*" name="a" />
+    				</div>
+    				<div id="heightInput">
+    					<p>And your height in here (inches)</p>
+	    				 <input id="heightus" type="number" pattern="[0-9]*" name="b"/> 
+					</div>
+					<div id="resultsus" class="text-center">Your BMI: </div>
+					<button type="button"  class="btn2" onclick="calculateus()">Calculate</button>
+					<button type="button" class="btnob" id="btnobus" onclick="obeseForm()">Obese Effects</button>
+					<button type="button" class="btnun" id="btnunin" onclick="underForm()" >Underweight Effects</button>
+				</div>
+			</form>
+			
+			<div class="form-popup" id="obForm">
+			<div class="form-container">
+				  
+			 <div> <p> <b>Bad effects of being Obese </b> </p> </div>
+			 <ul>
+				 <li><b>Trouble breathing:</b> larger body may prevent your lungs from expanding fully, and your breathing muscles may not work as well, so you can't take enough air in. Inflammation linked to belly fat may also affect your lungs.</li>
+				 <li><b>Osteoarthritis:</b> More weight puts more strain on your joints and on the cartilage that protects the ends of your bones, causing pain and stiffness. More body fat may also trigger more inflammation.</li>
+				 <li><b>High cholesterol:</b> While your genes have some influence, what you eat and how much you exercise also play a role. Unhealthy foods can raise your weight and your <q>bad</q> LDL cholesterol and triglyceride levels. While your genes have some influence, what you eat and how much you exercise also play a role. Unhealthy foods can raise your weight and your <q>bad</q> LDL cholesterol and triglyceride levels.</li>
+				 <li><b>Diabetes:</b> Belly fat is linked to insulin resistance. That's when your body makes insulin, but your cells can't use it properly to get glucose out of your blood. Higher-than-normal blood sugar can become diabetes and may lead to trouble with your heart, nerves, eyes, and more.</li>
+				 <li><b>High blood pressure:</b> When your body is large, your heart has to pump harder to get blood to all of your cells. That force pushes on your artery walls and may be damaging them.</li>
+				 <li><b>Pregnancy issues:</b> Moms-to-be who are overweight are more likely to get gestational diabetes and preeclampsia, dangerously high blood pressure that can harm both you and your baby.</li>
+			
+			
+				</ul>
+			  
+				  <p> <b>Treatment </b></p>
+				  <ul>
+					<li><b>High-fructose corn:</b>  Reduce the intake of High-fructose corn syrup foods, foods that contain High-fructose corn syrup are sodas, energy, sports drinks, coffee creamer, candy and ice cream, sauces, salad dressings.</li>
+					<li><b>Physical activities:</b> Exercising for 20-30 a day can help reduce the blood pressure problems. </li>
+					<li><b>Over-eating:</b>doctor may recommend a lower-calorie diet such as 1,200 to 1,500 calories a day for women and 1,500 to 1,800 calories a day for men. The calorie level depends on your body weight and physical activity level. A lower calorie diet with a variety of healthy foods will give you the nutrients you need to stay healthy.</li>
+					<li><b>Intermittent fasting: </b> 	Intermittent fasting is another way of reducing food intake that is gaining attention as a strategy for weight loss and health benefits. Alternate-day fasting is one type of intermittent fasting that consists of a <q>fast day </q> (eating no calories to one-fourth of caloric needs) alternating with a <q>fed day,</q> or a day of unrestricted eating.</li>
+					
+				   </ul>
+				  
+				  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+				  
+			</div>
+			  </div>
+			  <div class="form-popup" id="unForm">
+				<div class="form-container">
+					  
+				 <div> <p> <b>Bad effects of being under the BMI </b> </p> </div>
+				 <ul>
+					 <li><b>Getting sick frequently: </b> If a person might not be eating enough to gain enough nutrient and energy to fight off germs and infections.</li>
+					 <li><b>Anaemia: </b>A underweight person is more likely to suffer from anaemia, which causes dizziness, fatigue and headaches.</li>
+					 <li><b>Irregular periods: </b> Women who are underweight may not have regular periods, they may find menstruation stops, or an adolescent’s first period may be delayed or absent. Irregular or absent menstruation can cause infertility.</li>
+					 <li><b>Slow or impaired growth: </b> Young people need nutrients to grow and develop healthy bones. Being underweight and not getting enough calories could mean a person may not develop as expected. Doctors call this a ‘failure to thrive.</li>
+					 <li> <b>Skin, hair, or teeth problems: </b> If a person does not get enough nutrients in their daily diet, they may display physical symptoms, such as thinning skin, hair loss, dry skin, or poor dental health.</li>
+					 <li><b>Osteoporosis:</b> According to a 2016 study, being underweight increases a woman’s risk of osteoporosis, which is where the bones are brittle and more prone to breaking.</li>
+				
+				
+					</ul>
+				  
+					  <p> <b>Treatment </b></p>
+					  <ul>
+						<li><b>Incorporating additional foods:</b> A person can add calorie-dense food sources to their existing diet, such as putting slivered almonds on top of cereal or yogurt, sunflower or chia seeds on a salad or soup, or nut butter on whole-grain toast.</li>
+						<li><b>Eating several small meals a day: </b> Sometimes a person may be underweight because they cannot tolerate eating large meals. Instead, a person can eat several small meals throughout the day.</li>
+						<li> <b>Avoiding empty calories: </b>Eating high-calorie foods may cause a person to gain weight, but they also have excess fats that could affect a person’s heart and blood vessels. A person should avoid foods that are high in sugar and salt.</li>
+						<li> <b>Adding snacks:</b> High-protein and whole-grain carbohydrate snacks can help a person gain weight. Examples include peanut butter crackers, protein bars, trail mix, pita chips and hummus, or a handful of almonds.</li>
+						
+					   </ul>
+					  
+					  <button type="button" class="btn cancel" onclick="cForm()">Close</button>
+					  
+				</div>
+				  </div>
+			  
+    		
+		</div>
+		
+	</div>
+	<div class="column right">
+		<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1700px;height:2200px;overflow:hidden;visibility:hidden;">
+			<!-- Loading Screen -->
+			<div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+				<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"  />
+			</div>
+			<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1700px;height:2200px;overflow:hidden;">
+				<div style="background-color:#000000;">
+					<img data-u="image" style="opacity:0.5;" src="img/mg2.jpg" />
+					<div data-ts="flat" data-p="320" style="left:144px;top:80px;width:1500px;height:200px;position:absolute;overflow:hidden;">
+						<div data-to="50% 50%" data-ts="preserve-3d" data-t="0" style="left:550px;top:0px;width:1000px;height:500px;position:absolute;overflow:hidden;">
+							<div data-to="50% 50%" data-ts="preserve-3d" data-arr="1" style="left:20px;top:50px;width:200px;height:50px;position:absolute;color:#edf1f2;font-size:40px; font-size: 120px;line-height:1.2;letter-spacing:0.1em;">Be</div> <br>
+							<div data-to="50% 50%" data-ts="preserve-3d" data-arr="2" style="left:19px;top:36px;width:600px;height:30px;position:absolute;color:#edf1f2;font-size:80px;line-height:1.2; "> Responsible...</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<img data-u="image" src="img/im3.jpg" />
+					<div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:1700px;height:2200px;position:absolute;">
+						<div data-to="50% 50%" data-ts="preserve-3d" data-t="3" style="left:400px;top:-30px;width:500px;height:400px;position:absolute;">
+							<div data-to="50% 50%" data-ts="preserve-3d" data-t="4" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+								<div data-to="50% 50%" data-ts="preserve-3d" data-t="5" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+									<div data-to="50% 50%" data-ts="preserve-3d" data-t="6" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+										<div data-to="50% 50%" data-t="7" style="left:-50px;top:175px;width:600px;height:38px;position:absolute;opacity:0;color:#00a186;font-size:32px;font-weight:700;line-height:1.2;text-align:center; font-size: 120px;">Create a healthy eating habbints</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<img data-u="image" src="img/img6.jpg" />
+					<div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:1700px;height:2200px;position:absolute;">
+						<div data-to="50% 50%" data-ts="preserve-3d" data-arr="8" style="left:-2px;top:20px;width:2200px;height:20px;position:absolute;opacity:0;color:#0ff2f2;font-family:Arial,Helvetica,sans-serif;font-size:90px;line-height:1.2;text-align:center;">Practice a healthy living</div>
+					</div>
+				</div>
+				<div style="background-color:#000000;">
+					<img data-u="image" style="opacity:0.5;" src="img/img4.jpg" />
+					<div data-ts="flat" data-p="1800" data-po="50% -100%" style="left:120px;top:90px;width:600px;height:300px;position:absolute;">
+						<svg viewbox="0 0 200 200" width="200" height="200" data-t="10" style="left:66px;top:21px;display:block;position:absolute;opacity:0.6;overflow:visible;">
+							<path stroke-dasharray="2200" fill="none" stroke="#ffffff" d="M0,100C0,44.77152 44.77152,0 100,0C155.22848,0 200,44.77152 200,100C200,155.22848 155.22848,200 100,200C44.77152,200 0,155.22848 0,100Z" data-t="9"></path>
+						</svg>
+						<svg viewbox="0 0 80 80" width="80" height="80" data-t="12" style="left:3px;top:124px;display:block;position:absolute;opacity:0.6;overflow:visible;">
+							<path stroke-dasharray="0,400" fill="none" stroke="#ffffff" shape-rendering="crispEdges" d="M80,80L0,80L0,0L80,0Z" data-t="11"></path>
+						</svg>
+						<svg viewbox="0 0 500 200" data-to="50% 50%" width="500" height="200" data-t="13" style="left:50px;top:50px;display:block;position:absolute;opacity:0;overflow:visible;">
+							<g>
+								<text fill="#ffffff" x="17" y="110" style="position:absolute;font-family:Montserrat,sans-serif;font-size:40px;overflow:visible;">GOOD
+								</text>
+								<text fill="#ffffff" x="188" y="110" style="position:absolute;font-family:Montserrat,sans-serif;font-size:80px;letter-spacing:0.1em;overflow:visible;">HEALTHY IS GOOD LIFE
+								</text>
+								
+								
+							</g>
+						</svg>
+					</div>
+				</div>
+				<div>
+					<img data-u="image" src="img/img5.jpg" />
+					<div data-ts="flat" data-p="500" style="left:160px;top:-30px;width:800px;height:200px;position:absolute;">
+						<div data-arr="14" style="left:0px;top:36px;width:800px;height:70px;position:absolute;opacity:0;color:#199494;font-family:'Roboto Condensed',sans-serif;font-size:100px;font-weight:400;line-height:1.2;letter-spacing:-0.05em;text-align:center;text-shadow:2px 1px #d9d99a;">Exercising, &nbsp;&nbsp;<span style="font-size:1em;">is</span></div>
+						<div data-arr="15" style="left:0px;top:106px;width:800px;height:48px;position:absolute;opacity:0;color:#0d4d4d;font-family:'Roboto Condensed',sans-serif;font-size:20px;font-weight:200;line-height:1.2;letter-spacing:0.2em;text-align:center;text-shadow:1px 1px #d9d99a;"><span style="font-size:5em;">healthy</span> LIVING</div>
+					</div>
+				</div>
+			</div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">slider html</a>
+			<!-- Bullet Navigator -->
+			<div data-u="navigator" class="jssorb031" style="position:absolute;bottom:16px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+				<div data-u="prototype" class="i" style="width:13px;height:13px;">
+					<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+						<circle class="b" cx="8000" cy="8000" r="5800"></circle>
+					</svg>
+				</div>
+			</div>
+			<!-- Arrow Navigator -->
+			<div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+				<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+					<polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+				</svg>
+			</div>
+			<div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+				<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+					<polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+				</svg>
+			</div>
+		</div>
+	</div>
+	</div>
+    </div>
+	<script src="main.js"></script>
+	<script type="text/javascript">jssor_1_slider_init();
+    </script>
+</body>
+</html>
